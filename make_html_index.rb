@@ -81,8 +81,7 @@ end
 # But of course chapter 15's HTML pages are not in the same place
 # as the others, so we'll just hard code the links.
 chapterExamples = Chapter.new("ch15", "Chapter 15")
-chapterExamples.addExamplePage("htdocs/index.html")
-chapterExamples.addExamplePage("htdocs/mysqli_connect.php")
+chapterExamples.addExamplePage("htdocs/index.php")
 chapters.push(chapterExamples)
 
 # Output links to sample pages as HTML lists
