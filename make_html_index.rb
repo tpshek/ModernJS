@@ -78,6 +78,13 @@ if (File.exist?(homeDir))
 	end
 end
 
+# But of course chapter 15's HTML pages are not in the same place
+# as the others, so we'll just hard code the links.
+chapterExamples = Chapter.new("ch15", "Chapter 15")
+chapterExamples.addExamplePage("htdocs/index.html")
+chapterExamples.addExamplePage("htdocs/mysqli_connect.php")
+chapters.push(chapterExamples)
+
 # Output links to sample pages as HTML lists
 chapters.each do |e|
 	if (e.examplePages?) 
@@ -90,16 +97,6 @@ chapters.each do |e|
 	end
 end
 
-# But of course chapter 15's HTML pages are not in the same place
-# as the others, so we'll just hard code the link.
-puts <<HTMLCH15
-<H2>Chapter 15</H2>
-<ul>
-<li><a href="ch15/htdocs/index.html">index.html</li>
-<li><a href="ch15/mysqli_connect.php">mysqli_connect.php</li>
-</ul>
-HTMLCH15
- 
 puts <<HTMLEND
 </body>
 </html>
